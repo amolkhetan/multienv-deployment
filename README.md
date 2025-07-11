@@ -52,10 +52,12 @@ URLs using local hoste
 
    **4. Issue Faced**
    - while running container faced 2 issues:
-     1. mondo db uri was missing for backend
+     1. mongo db uri was missing for backend
      Fixed: by adding environment section in docker compose
      3. apiurl was missing for frontend
      Fixed: Ticket.js to use the url correctly
+    <img width="1462" height="399" alt="image" src="https://github.com/user-attachments/assets/6055b65e-d127-469a-9253-d0195ea6216b" />
+
 
 
 
