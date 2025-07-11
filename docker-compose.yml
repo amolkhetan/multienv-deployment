@@ -1,0 +1,28 @@
+services:
+  backend-dev:
+    environment:
+      - MONGO_URI=mongodb+srv://amolkhetan:fhcj60zmtKUsdXcZ@amol-cluster.smlmwf1.mongodb.net/devdb
+    image: backend-dev
+    build:
+      context: ./backend/dev
+      dockerfile: Dockerfile
+    ports:
+    - "3001:3001"
+
+  backend-prod:
+    environment:
+      - MONGO_URI=mongodb+srv://amolkhetan:fhcj60zmtKUsdXcZ@amol-cluster.smlmwf1.mongodb.net/proddb
+    image: backend-prod
+    build:
+      context: ./backend/prod
+      dockerfile: Dockerfile
+    ports:
+    - "3002:3002"
+
+  frontend:
+    image: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+    - "3000:3000"
